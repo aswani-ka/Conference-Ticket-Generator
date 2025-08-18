@@ -1,0 +1,24 @@
+{
+  "name": "conference-ticket-generator-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Conference ticket generator coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswani-ka/Conference-Ticket-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswani-ka/Conference-Ticket-Generator/issues"
+  },
+  "homepage": "https://github.com/aswani-ka/Conference-Ticket-Generator#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
