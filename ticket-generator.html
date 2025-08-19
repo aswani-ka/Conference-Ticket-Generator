@@ -10,38 +10,60 @@
     <title>Frontend Mentor | Conference ticket generator</title>
 
   </head>
-  <body>
-    <header>
-      <img src="/assets/images/logo-full.svg" alt="">
-    </header>
-    
-    <main>
-      <div>
-        <div>
-          <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-          <p>Secure your spot at next year's biggest coding conference.</p>
-        </div>
 
-        <div>
-          <form>
-            <h3>Upload Avatar</h3>
-            <input type="file" name="" id="">
-            <p>Drag and drop or click to upload</p>
-            <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+  <body class="bg-[url(/assets/images/background-desktop.png),linear-gradient(to_bottom,#0f0c29,#302b63,#24243e)] bg-no-repeat bg-cover font-inconsolate text-[20px] text-neutral-300">
 
-            <h3>Full Name</h3>
-            <input type="text" name="full-name" id="">
+    <div class="bg-[url(/assets/images/pattern-lines.svg)] bg-no-repeat bg-cover h-[650px] mx-auto">
 
-            <h3>Email Address</h3>
-            <input type="email" name="email" id="" placeholder="example@email.com">
+      <div class="min-h-screen
+      bg-[url('/assets/images/pattern-circle.svg'),url('/assets/images/pattern-squiggly-line-bottom-desktop.svg'),url('/assets/images/pattern-squiggly-line-top.svg'),url('/assets/images/pattern-circle.svg')]
+      bg-[position:0px_0px,0px_400px,1200px_20px,1070px_400px]
+      bg-[length:150px,1000px,550px,150px] bg-no-repeat mx-auto">
 
-            <h3>GitHub Username</h3>
-            <input type="text" name="full-name" id="" placeholder="@yourusername">
+        <header class="flex justify-center items-center p-6">
+          <img src="/assets/images/logo-full.svg" alt="">
+        </header>
+      
+        <main class="flex justify-center items-center leading-12">
+          <div>
+            <div class="max-w-[700px] mx-auto text-center">
+              <h1 class="text-5xl font-bold text-neutral-100">Your Journey to Coding Conf 2025 Starts Here!</h1>
+              <p>Secure your spot at next year's biggest coding conference.</p>
+            </div>
 
-            <button type="submit">Generate My Ticket</button>
-          </form>
-        </div>
+            <div class="max-w-[400px] mx-auto mt-3">
+              
+              <form>
+                <h3>Upload Avatar</h3>
+                <label for="file-upload">
+                  <div class="flex flex-col justify-center items-center gap-3 border-2 border-dashed rounded-2xl border-neutral-400 text-center p-7 bg-neutral-700/50 hover:bg-neutral-600/60">
+
+                    <input type="file" name="file-upload" id="file-upload" hidden>
+                    <img src="/assets/images/icon-upload.svg" alt="" class="bg-gray-700 rounded p-1 w-10 h-10 ">
+                </label>
+                  <p class="text-lg text-neutral-400">Drag and drop or click to upload</p>
+                </div>
+
+                <div class="flex gap-2 mt-2">
+                  <img src="/assets/images/icon-info.svg" alt="">
+                  <p class="text-xs text-neutral-400">Upload your photo (JPG or PNG, max size: 500KB).</p>
+                </div>
+      
+                <h3>Full Name</h3>
+                <input type="text" name="full-name" id="" class="border-1 border-neutral-300 rounded-2xl pr-45 px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300">
+
+                <h3>Email Address</h3>
+                <input type="email" name="email" id="" placeholder="example@email.com" class="border-1 border-neutral-300 rounded-2xl pr-45 px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300">
+
+                <h3>GitHub Username</h3>
+                <input type="text" name="full-name" id="" placeholder="@yourusername" class="border-1 border-neutral-300 rounded-2xl pr-45 px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300">
+
+                <button type="submit" class="bg-red-400 rounded-2xl text-indigo-950 font-bold px-27.5 cursor-pointer mt-5 hover:bg-red-400/90 ">Generate My Ticket</button>
+              </form>
+            </div>
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
   </body>
 </html>
