@@ -41,7 +41,7 @@
             </div>
 
             <div>
-              <form>
+              <form id="form-ticket-generator" novalidate>
                 <div class="max-w-[400px] mx-auto sm:mt-3">
                   <div>
                     <h3 class="font-bold mb-1">Upload Avatar</h3>
@@ -53,23 +53,26 @@
                       <p class="sm:text-lg text-neutral-400">Drag and drop or click to upload</p>
                     </div>
                   </div>
-                  <div class="flex gap-2 mt-2">
+                  <div class="flex gap-2 mt-2 items-start">
                     <img src="/assets/images/icon-info.svg" alt="">
                     <p class="text-xs text-neutral-400 mb-5 sm:mb-0">Upload your photo (JPG or PNG, max size: 500KB).</p>
+                    <p id="unsupported-file" class="text-xs text-red-400 hidden">File is too large. Please upload a photo under 500KB.</p>
                   </div>
                   <div>
                     <h3 class="font-bold mb-1">Full Name</h3>
-                    <input type="text" name="full-name" id="" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-3 sm:mb-0">
+                    <input type="text" name="full-name" id="full-name" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-3 sm:mb-0">
                   </div>
                   <div>
                     <h3 class="font-bold mb-1">Email Address</h3>
-                    <input type="email" name="email" id="" placeholder="example@email.com" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-3 sm:mb-0">
+                    <input type="email" name="email" id="email" placeholder="example@email.com" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-3 sm:mb-0">
+                    <img src="/assets/images/icon-info.svg" alt="" id="error-logo" class="hidden">
+                    <p id="invalid-email" class="text-xs text-red-400 hidden">Please enter a valid email address</p>
                   </div>
                   <div>
                     <h3 class="font-bold mb-1">GitHub Username</h3>
-                    <input type="text" name="full-name" id="" placeholder="@yourusername" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-5 sm:mb-0">
+                    <input type="text" name="full-name" id="git-username" placeholder="@yourusername" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-5 sm:mb-0">
                   </div>
-                  <button type="submit" class="bg-red-400 rounded-2xl text-indigo-950 font-extrabold sm:px-27.5 px-32 py-3 sm:py-0 cursor-pointer sm:mt-5 hover:bg-red-400/90 ">Generate My Ticket</button>
+                  <button type="submit" id="submit-button" class="bg-red-400 rounded-2xl text-indigo-950 font-extrabold sm:px-27.5 px-32 py-3 sm:py-0 cursor-pointer sm:mt-5 hover:bg-red-400/90 ">Generate My Ticket</button>
                 </div>
               </form>
             </div>
@@ -77,5 +80,6 @@
         </main>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

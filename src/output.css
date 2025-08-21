@@ -8,6 +8,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-indigo-950: oklch(25.7% 0.09 281.288);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -226,6 +227,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
   }
@@ -355,6 +359,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-center {
     justify-content: center;
   }
@@ -397,6 +404,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-r {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
+  }
   .border-dashed {
     --tw-border-style: dashed;
     border-style: dashed;
@@ -406,6 +417,9 @@
   }
   .border-neutral-400 {
     border-color: var(--color-neutral-400);
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
   }
   .bg-\[u\] {
     background-color: u;
@@ -591,6 +605,12 @@
   }
   .text-neutral-400 {
     color: var(--color-neutral-400);
+  }
+  .text-red-300 {
+    color: var(--color-red-300);
+  }
+  .text-red-400 {
+    color: var(--color-red-400);
   }
   .underline {
     text-decoration-line: underline;
