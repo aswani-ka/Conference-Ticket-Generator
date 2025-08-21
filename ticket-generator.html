@@ -47,15 +47,20 @@
                     <h3 class="font-bold mb-1">Upload Avatar</h3>
                     <label for="file-upload">
                       <div class="flex flex-col justify-center items-center gap-3 border-2 border-dashed rounded-2xl border-neutral-400 text-center sm:p-7 p-4 bg-neutral-700/50 hover:bg-neutral-600/60 cursor-pointer">
-                        <input type="file" name="file-upload" id="file-upload" hidden>
-                        <img src="/assets/images/icon-upload.svg" alt="" class="bg-gray-700 rounded p-1 w-10 h-10 ">
+                        <input type="file" name="file-input" id="file-input" accept="image/png, image/jpg, image/jpeg" hidden>
+                        <img src="/assets/images/icon-upload.svg" alt="" id="upload-icon" class="bg-gray-700 rounded p-1 w-10 h-10">
+                        <img id="preview-img" style="display: none; width: 70px; height: 60px; border-radius: 20%;">
                     </label>
-                      <p class="sm:text-lg text-neutral-400">Drag and drop or click to upload</p>
+                      <div id="button-div" class="flex gap-3 hidden">
+                        <button id="remove-btn" class="bg-neutral-600/50 hover:bg-neutral-600/60 rounded-md pr-3 px-2 py-0 cursor-pointer">Remove image</button>
+                        <button id="change-btn" class="bg-neutral-600/50 hover:bg-neutral-600/60 rounded-md pr-3 px-2 py-0 cursor-pointer">Change image</button>
+                      </div>
+                      <p id="upload-para" class="sm:text-lg text-neutral-400">Drag and drop or click to upload</p>
                     </div>
                   </div>
                   <div class="flex gap-2 mt-2 items-start">
                     <img src="/assets/images/icon-info.svg" alt="">
-                    <p class="text-xs text-neutral-400 mb-5 sm:mb-0">Upload your photo (JPG or PNG, max size: 500KB).</p>
+                    <p id="upload-photo-para" class="text-xs text-neutral-400 mb-5 sm:mb-0">Upload your photo (JPG or PNG, max size: 500KB).</p>
                     <p id="unsupported-file" class="text-xs text-red-400 hidden">File is too large. Please upload a photo under 500KB.</p>
                   </div>
                   <div>
@@ -65,8 +70,10 @@
                   <div>
                     <h3 class="font-bold mb-1">Email Address</h3>
                     <input type="email" name="email" id="email" placeholder="example@email.com" class="border-1 border-neutral-300 sm:rounded-2xl sm:pr-45 sm:px-5 bg-neutral-700/50 hover:bg-neutral-600/60 focus:border-4 focus:border-neutral-300 rounded-lg pr-55 px-3 py-2 sm:py-0 mb-3 sm:mb-0">
-                    <img src="/assets/images/icon-info.svg" alt="" id="error-logo" class="hidden">
-                    <p id="invalid-email" class="text-xs text-red-400 hidden">Please enter a valid email address</p>
+                    <div class="flex gap-2 mt-2">
+                      <img src="/assets/images/icon-info.svg" alt="" id="error-logo" class="outline-1 outline-red-400 rounded-full hidden">
+                      <p id="invalid-email" class="text-xs text-red-400 hidden">Please enter a valid email address</p>
+                    </div>
                   </div>
                   <div>
                     <h3 class="font-bold mb-1">GitHub Username</h3>
