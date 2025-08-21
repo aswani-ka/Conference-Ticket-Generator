@@ -8,45 +8,58 @@
         <title>Generated Ticket Success Page</title>
     </head>
     
-    <body class="bg-[url(/assets/images/background-desktop.png),linear-gradient(to_bottom,#0f0c29,#302b63,#24243e)] bg-no-repeat bg-cover font-inconsolate text-[20px] text-neutral-300">
+    <body class="min-h-screen
+    md:bg-[url(/assets/images/background-desktop.png),linear-gradient(to_bottom,#0f0c29,#302b63,#24243e)] 
+    sm:bg-[url(/assets/images/background-tablet.png)]
+    bg-[url(/assets/images/background-mobile.png)]
+    bg-no-repeat bg-cover font-inconsolate text-[20px] text-neutral-300">
         <div class="bg-[url(/assets/images/pattern-lines.svg)] bg-no-repeat bg-cover h-[650px] mx-auto">
         
             <div class="min-h-screen
-              bg-[url('/assets/images/pattern-circle.svg'),url('/assets/images/pattern-squiggly-line-bottom-desktop.svg'),url('/assets/images/pattern-squiggly-line-top.svg'),url('/assets/images/pattern-circle.svg')]
-              bg-[position:80px_0px,0px_400px,1200px_20px,1070px_400px]
-              bg-[length:150px,1000px,550px,150px] bg-no-repeat mx-auto">
+              md:bg-[url('/assets/images/pattern-circle.svg'),url('/assets/images/pattern-squiggly-line-bottom-desktop.svg'),url('/assets/images/pattern-squiggly-line-top.svg'),url('/assets/images/pattern-circle.svg')]
+            md:bg-[position:80px_0px,0px_400px,1200px_20px,1070px_400px]
+            md:bg-[size:150px,1000px,550px,150px] 
+
+            sm:bg-[url('/assets/images/pattern-circle.svg'),url('/assets/images/pattern-squiggly-line-bottom-desktop.svg'),url('/assets/images/pattern-squiggly-line-top.svg'),url('/assets/images/pattern-circle.svg')]
+            sm:bg-[position:0px_0px,0px_620px,500px_30px,500px_500px]
+            sm:bg-[size:90px,500px,150px,90px]
+
+            bg-[url('/assets/images/pattern-circle.svg'),url('/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'),url('/assets/images/pattern-squiggly-line-top.svg'),url('/assets/images/pattern-circle.svg')]
+            bg-[position:0px_0px,0px_650px,380px_20px,430px_500px]
+            bg-[size:80px,300px,90px,100px]
+            bg-no-repeat mx-auto">
 
                 <header class="flex justify-center items-center p-6">
-                    <img src="/assets/images/logo-full.svg" alt="">
+                    <img src="/assets/images/logo-full.svg" alt="" class="w-45 sm:w-60">
                 </header>
 
                 <main>
                     <div class="flex flex-col gap-10 ">
                         <div class="justify-center items-center leading-8 max-w-[600px] mx-auto text-center p-10">
-                            <h1 class="text-5xl font-bold">Congrats, !</h1>
-                            <h1 class="text-5xl font-bold">Your ticket is ready.</h1>
-                            <p class="text-[20px] mt-5">We've emailed your ticket to  and will send updates in the run up to the event.</p>
+                            <h1 class="sm:text-5xl text-4xl font-extrabold">Congrats, !
+                            Your ticket is ready.</h1>
+                            <p class="sm:text-[20px] text-[17px] mt-5 text-center">We've emailed your ticket to  and will send updates in the run up to the event.</p>
                         </div>
 
                         
-                        <div class="bg-[url(/assets/images/pattern-ticket.svg)] bg-no-repeat bg-contain px-5 py-5 min-w-[500px] mx-auto">
+                        <div class="bg-[url(/assets/images/pattern-ticket.svg)] bg-no-repeat bg-contain px-5 py-5 sm:min-w-[500px] min-w-[400px] mx-auto">
                             <div class="flex gap-4">
-                                <img src="/assets/images/logo-mark.svg" alt="">
+                                <img src="/assets/images/logo-mark.svg" alt="" class="w-7 sm:w-10">
 
                                 <div>
-                                    <h3 class="text-3xl font-bold">Coding Conf</h3>
-                                    <p class="text-sm">Jan 31, 2025 / Austin, TX</p>
+                                    <h3 class="sm:text-3xl text-2xl font-bold">Coding Conf</h3>
+                                    <p class="sm:text-sm text-xs">Jan 31, 2025 / Austin, TX</p>
                                 </div>
                             </div>
 
                             <div class="flex mt-10 gap-3 items-center">
-                                <img src="/assets/images/image-avatar.jpg" alt="" class="w-18 h-18 rounded-xl">
+                                <img src="/assets/images/image-avatar.jpg" alt="" class="sm:w-18 sm:h-18 w-10 h-10 sm:rounded-xl rounded-md">
 
                                 <div>
-                                    <p class="text-2xl">Jonatan Kristof</p>
+                                    <p class="sm:text-2xl text-xl">Jonatan Kristof</p>
                                     <div class="flex gap-2">
                                         <img src="/assets/images/icon-github.svg" alt="">
-                                        <p class="text-sm">@jonatankristof0101</p>
+                                        <p class="sm:text-sm text-xs">@jonatankristof0101</p>
                                     </div>
                                 </div>
                             </div>
