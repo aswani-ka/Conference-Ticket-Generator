@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     uploadIcon.addEventListener("click", () => fileInput.click());
-
+    changeBtn.addEventListener("click", () => fileInput.click());
     fileInput.addEventListener("change", function(){
         const file = fileInput.files[0];
 
@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         reader.readAsDataURL(file);
     });
+
+    
+
+
 
     formSubmit.addEventListener("submit", (e) => {
         e.preventDefault();
