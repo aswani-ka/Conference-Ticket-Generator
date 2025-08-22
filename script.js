@@ -23,13 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(!file) return;
 
-        if(!file.type.startsWith("image/")) {
-            alert("Please upload an image file (JPG or PNG)");
+        if(!file.type.match(/^image\/(jpeg|jpg|png)$/)) {
+            alert("Please upload an image file (PNG/JPG/JPEG)");
+            fileInput.value = "";
             return;
         }
 
-        if(file.size > (500 * 1024)) {
+        if(file.size > 500 * 1024) {
             alert("File size must be less than 500KB");
+            fileInput.value ="";
             return;
         }
 
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     removeBtn.addEventListener("click", () => {
-        
+
         previewImg.src = "";
         previewImg.style.display = "none";
         fileInput.value = "";
