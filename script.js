@@ -16,6 +16,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    uploadIcon.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", function(){
+        const file = fileInput.files[0];
+
+        if(!file) return;
+
+        if(!file.type.startsWith("image/")) {
+            alert("Please upload an image file (JPG or PNG)");
+            return;
+        }
+
+        if(file.size > (500 * 1024)) {
+            alert("File size must be less than 500KB");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            uploadIcon.classList.add("hidden");
+            buttonDiv.classList.remove("hidden");
+            uploadPara.classList.add("hidden");
+            previewImg.src = e.target.result;
+            previewImg.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    });
+
     formSubmit.addEventListener("submit", (e) => {
         e.preventDefault();
 
