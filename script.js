@@ -44,7 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
         reader.readAsDataURL(file);
     });
 
-    
+    removeBtn.addEventListener("click", () => {
+        
+        previewImg.src = "";
+        previewImg.style.display = "none";
+        fileInput.value = "";
+        uploadIcon.classList.remove("hidden");
+        buttonDiv.classList.add("hidden");
+        uploadPara.classList.remove("hidden");
+    });
 
 
 
