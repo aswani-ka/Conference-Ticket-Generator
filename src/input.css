@@ -4,3 +4,7 @@
 @theme {
     --font-inconsolate: "Inconsolata", monospace;
 }
+
+.highlight {
+    color: rgb(201, 107, 107);
+}
