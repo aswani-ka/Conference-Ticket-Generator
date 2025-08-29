@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const uploadPara = document.getElementById("upload-para");
     const removeBtn = document.getElementById("remove-btn");
     const changeBtn = document.getElementById("change-btn");
+    const fullName = document.getElementById("full-name");
     const emailInp = document.getElementById("email");
+    const gitUsername = document.getElementById("git-username");
     const invalidEmail = document.getElementById("invalid-email");
     const errorLogo = document.getElementById("error-logo");
-    const submitButton = document.getElementById("submit-button");
-    
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -66,14 +66,25 @@ document.addEventListener("DOMContentLoaded", () => {
             invalidEmail.classList.remove("hidden");
             errorLogo.classList.remove("hidden");
             emailInp.classList.add("border-red-400");
+            return
         }
-        else {
 
-            invalidEmail.classList.add("hidden");
-            errorLogo.classList.add("hidden");
+        const userName = fullName.value.trim();
+        const userEmail = emailInp.value.trim();
+        const userGit = gitUsername.value.trim();
+        const userImage = fileInput.files[0];
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            
+            sessionStorage.setItem("name", userName);
+            sessionStorage.setItem("email", userEmail);     
+            sessionStorage.setItem("git", userGit);
+            sessionStorage.setItem("image", e.target.result);
+            
             window.location.href = "success-page.html";
-            emailInp.value = "";
         }
+        reader.readAsDataURL(userImage);
     });
 
     emailInp.addEventListener("input", () => {
