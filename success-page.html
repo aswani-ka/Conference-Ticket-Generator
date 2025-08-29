@@ -34,15 +34,16 @@
                 </header>
 
                 <main>
-                    <div class="flex flex-col gap-10 ">
-                        <div class="justify-center items-center leading-8 max-w-[600px] mx-auto text-center p-10">
-                            <h1 class="sm:text-5xl text-4xl font-extrabold">Congrats, !
-                            Your ticket is ready.</h1>
-                            <p class="sm:text-[20px] text-[17px] mt-5 text-center">We've emailed your ticket to  and will send updates in the run up to the event.</p>
+                    <div class="flex flex-col gap-8 ">
+                        <div class="justify-center items-center leading-8 max-w-[700px] mx-auto text-center p-2">
+                            <h1 id="result-heading" class="sm:text-5xl text-4xl font-extrabold"></h1>
                         </div>
 
+                        <div>
+                            <p id="result-para" class="text-lg sm:text-xl text-center max-w-[460px] mx-auto mb-15 px-5"></p>
+                        </div>
                         
-                        <div class="bg-[url(/assets/images/pattern-ticket.svg)] bg-no-repeat bg-contain px-5 py-5 sm:min-w-[500px] min-w-[400px] mx-auto">
+                        <div class="bg-[url(/assets/images/pattern-ticket.svg)] bg-no-repeat bg-contain px-5 py-5 sm:min-w-[450px] min-w-[400px] mx-auto">
                             <div class="flex gap-4">
                                 <img src="/assets/images/logo-mark.svg" alt="" class="w-7 sm:w-10">
 
@@ -53,13 +54,13 @@
                             </div>
 
                             <div class="flex mt-10 gap-3 items-center">
-                                <img src="/assets/images/image-avatar.jpg" alt="" class="sm:w-18 sm:h-18 w-10 h-10 sm:rounded-xl rounded-md">
+                                 <img alt="avatar" id="user-image" class="sm:w-18 sm:h-18 w-10 h-10 sm:rounded-xl rounded-md">
 
                                 <div>
-                                    <p class="sm:text-2xl text-xl">Jonatan Kristof</p>
+                                    <p id="user-name" class="sm:text-2xl text-xl"></p>
                                     <div class="flex gap-2">
                                         <img src="/assets/images/icon-github.svg" alt="">
-                                        <p class="sm:text-sm text-xs">@jonatankristof0101</p>
+                                        <p id="git-id" class="sm:text-sm text-xs"></p>
                                     </div>
                                 </div>
                             </div>
@@ -68,5 +69,6 @@
                 </main>
             </div>
         </div>
+        <script src="success.js"></script>
     </body>
 </html>
