@@ -202,8 +202,8 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
@@ -255,12 +255,6 @@
   }
   .w-45 {
     width: calc(var(--spacing) * 45);
-  }
-  .max-w-\[00px\] {
-    max-width: 00px;
-  }
-  .max-w-\[300px\] {
-    max-width: 300px;
   }
   .max-w-\[400px\] {
     max-width: 400px;
@@ -714,6 +708,13 @@
 }
 .highlight {
   color: rgb(201, 107, 107);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 @property --tw-border-style {
   syntax: "*";
