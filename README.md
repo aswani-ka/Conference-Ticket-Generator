@@ -1,4 +1,4 @@
-Conference Ticket Generator
+# Conference Ticket Generator
 
 A responsive and accessible Conference Ticket Generator web app where users can fill out their details, upload an avatar, and instantly generate a digital ticket.
 
@@ -6,7 +6,7 @@ This project is built to practice form validation, accessibility, and responsive
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-✨ Features
+## Features
 
 📝 Form Completion – Users can enter their name, email, and upload an avatar.
 
